@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html Layout</title>
+    </head>
+    <style>
+        *
+        /* star indicates universal selector.it select all the html elements */
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+       #nav-div{
+        width: 100%;
+        min-height: 70px;
+        background-color: grey;
+        line-height: 70px;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-bottom: 9px;
+        text-align: center;
+        }
+        #Intr-div{
+            width: 100%;
+            min-height: 90px;
+            background-color: gray;
+            line-height: 90px;
+            text-align: center;
+            margin-bottom: 9px;
+        }
+        #parent-div{
+            width:100%;
+            
+            background-color: aliceblue;
+            margin-bottom: 320px;
+        }
+        #Main-div{
+            width: 64%;
+            min-height: 300px;
+            line-height: 300px;
+            float: left;
+            background-color: lightgrey;
+            text-align: center;
+        }
+        #side-div{
+            width: 34%;
+            min-height: 300px;
+            line-height: 300px;
+            text-align: center;
+            background-color: lightgrey;
+            float: right;
+            
+        }
+        #Footer-div{
+            width: 100%;
+            min-height: 90px;
+            line-height: 90px;
+            text-align: center;
+            background-color: gray;
+        }
+       #wrapper-div{
+              width:90%;
+              margin: auto;
+       }
+
+       </style>
+    <body>
+    <div id="wrapper-div" > 
+        <div id="nav-div">
+            Navigation
+        </div>
+        <div id="Intr-div">
+            Introduction
+        </div>
+        <div id="parent-div">
+            <div id="Main-div">
+                Main content area
+            </div>
+            <div id="side-div">
+                Sidebar
+            </div>
+        </div>
+        <div id="Footer-div">
+            Footer
+        </div>
+    </div>    
+
+    
+    </body>
+</html>

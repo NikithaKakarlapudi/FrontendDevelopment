@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iframe Sample Page</title>
+</head>
+
+<body>
+    <p>Iframe can be used to show/load another page in the current page. </p>
+    <div>
+        <iframe src="./layout.html" title="iframe sample with google"></iframe>
+    </div>
+    <p>We can load multiple webpages in a single page with the help of iframe. Adding title to the iframe helps to
+        identify the page that is loaded in iframe.</p>
+    
+
+    <div>
+
+        <p>We can target an iframe from anchor tag, we will define name for iframe and give that name as target in anchor tag</p>
+        <iframe src="./imgtag.html" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+        <p><a href="https://bluepal.com" target="iframe_a">Load Bluepal website in iframe</a></p>
+
+        
+    </div>
+
+    <div>
+        <iframe width="50%" height="300" src="https://bluepal.com" title="Bluepal website"></iframe>
+        <iframe width="50%" height="300" src="https://ensurity.com" title="Ensurity website"></iframe>
+
+    </div>
+
+
+</body>
+
+</html>
