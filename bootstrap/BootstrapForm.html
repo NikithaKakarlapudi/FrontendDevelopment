@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bootstrap Forms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>stacked form</h2>
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <lable for="email">email</lable>
+                    <input type="email" class="form-control" id="email" placeholder="enter email" name="email">
+                </div>
+                <div class="form-group">
+                    <lable for="pwd">password</lable>
+                    <input type="password" class="form-control" id="pwd" placeholder="enter password" name="pwd">
+                </div>
+                <div class="form-group-check">
+                    <lable class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember">Remember me
+                    </lable>
+                </div>
+                <button type="submit" class="btn btn-primary">submit</button>
+            </form>
+        </div><br>
+
+        <div class="container">
+            <h2>Inline form </h2>
+        </div>
+        <form class="form-inline" action="/action_page.php">
+            <lable for="email">email address:</lable>
+            <input type="email" class="form-control" placeholder="enter email" id="email">
+             <lable for="pwd">password:</lable>
+             <input type="password" class="form-control" placeholder="enter password"
+             id="pwd">
+             <div class="form-check">
+                <lable class="form-check-label">
+                    <input class="form-check-input" type="checkbox">Remenber me
+                </lable>
+             </div>
+             <buttom type="submit" class="btn btn-primary">submit</buttom>
+        </form><br>
+        <form class="form-inline" action="/action_page.php">
+            <lable for="email" class="mb-3 mr-sm-3">email:</lable>
+            <input type="text" class="form-control mb-3 mr-sm-3" id="email" placeholder="Enter Email" name="email">
+            <lable for="pwd" class="mb-3 mr-sm-3">password:</lable>
+            <input for="text" class=" form-control mb-3 mr-sm-3" id="email" placeholder="password" name="password">
+            <div class="form-check mb-3 mr-sm-3">
+                <lable class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="remenber">Remember me
+                </lable>
+            </div>
+        </form>
+        <div class="container">
+            <h2>form validation</h2>
+            <form action="/action_page.php" class="was-validated">
+                <div class="form-row">
+                    <div class="col mb-2">
+                        <lable class="Fname">First name</lable>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="Firstname" placeholder="enter name" name="fname"required>
+                        <div class="valid-feedback">valid.</div>
+                        <div class="invalid-feedback">please fill out this field</div>
+                    </div>
+                    <div class="col mb-2">
+                        <lable class="Lname">Last name</lable>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="Lastname" placeholder="enter name" name="Lname"required>
+                        <div class="valid-feedback">valid.</div>
+                        <div class="invalid-feedback">please fill out this field</div>
+
+                    </div>
+                    <div class="col mb-2">
+                        <lable class="Uname">User name</lable>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="Username" placeholder="enter name" name="uname"required>
+                        <div class="valid-feedback">valid.</div>
+                        <div class="invalid-feedback">please fill out this field</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col mb-4">
+                        <lable class="city">City</lable>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="City" placeholder="enter" name="City"required>
+                        <div class="valid-feedback">valid.</div>
+                        <div class="invalid-feedback">please fill out this field</div>
+                     </div>
+                     <div class="col mb-4">
+                       <lable class="State">State</lable>
+                       <input type="text" class="form-control mb-2 mr-sm-2" id="City" placeholder="enter" name="State"required>
+                       <div class="valid-feedback">valid.</div>
+                       <div class="invalid-feedback">please fill out this field</div>
+                     </div>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember" required>I agree.
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">check this checkbox to continue.</div>
+                    </label>
+                </div>
+                <button type="submit" class="bth btn-primary">submit</button>
+            </form>
+        </div>
+    </body>
+</html>
