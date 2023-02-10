@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Bottstrap filterable table</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container mt-3">
+            <h2>Filterable Table</h2>
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <br>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                <tr>
+                  <td>nikitha</td>
+                  <td>kakarlapudi</td>
+                  <td>nikithavarmakakarlapudi</td>
+                </tr>
+                <tr>
+                  <td>priya</td>
+                  <td>datla</td>
+                  <td>priyanka123@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>rishi</td>
+                  <td>varma</td>
+                  <td>rishivarma@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>lasya</td>
+                  <td>varma</td>
+                  <td>lasyapriya@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <script>
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
+          <div class="container mt-3">
+            <h2>Filterable List</h2>
+            <p>Type something in the input field to search the list for specific items:</p>  
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <br>
+            <ul class="list-group" id="myList">
+              <li class="list-group-item">First item</li>
+              <li class="list-group-item">Second item</li>
+              <li class="list-group-item">Third item</li>
+              <li class="list-group-item">Fourth</li>
+            </ul>  
+          </div>
+          
+          <script>
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myList li").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
+          
+
+    </body>
+</html>
