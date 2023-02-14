@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator Example</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            h2{
+                margin: 30px 0px;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container"> 
+            <h2>Simple Calculator using Javascript</h2>
+            <div class="form-group col-sm-4">
+                <lable>First Number</lable>
+                <input id="fstNum" type="text" class="form-control form-control-sm" placeholder="Enter First Number">
+            </div> 
+            <div class="form-group col-sm-4">
+                <lable>Second Number</lable>
+                <input id="secNum" type="text" class="form-control form-control-sm" placeholder="Enter Second Number">
+            </div>  
+            <div class="container mt-3">
+                <button id="btnadd" type="button" class="btn btn-primary" onclick="Calculate(this)" >Add</button>
+                <button id="btnsub" type="button" class="btn btn-primary" onclick="Calculate(this)" >Sub</button>
+                <button id="btnmulti" type="button" class="btn btn-primary" onclick="Calculate(this)" >Multiply</button>
+                <button id="btndiv" type="button" class="btn btn-primary" onclick="Calculate(this)" >Divide</button> 
+                <div class="form-group mt-3">
+                    <lable >Result : &nbsp; <span id="result"></span></lable>
+                </div>  
+            </div>     
+        </div>
+        <script type="text/javascript" src="calculator.js" ></script>
+        <script>
+
+            function Calculate(operation){
+                
+                var input1 = parseInt(document.getElementById("fstNum").value);
+                var input2 = parseInt(document.getElementById("secNum").value);
+                var res = document.getElementById("result");
+                if(operation.innerHTML == "Add")
+                {
+                    console.log("Additon");
+                    res.innerHTML = Add(input1,input2);
+                }
+                else if(operation.innerHTML == "Sub")
+                {
+                    console.log("Sub");
+                    res.innerHTML = Sub(input1,input2);
+                }
+                else if(operation.innerHTML == "Multiply")
+                {
+                    console.log("Multi");
+                    res.innerHTML = Multiply(input1,input2);
+                }
+                else if(operation.innerHTML == "Divide")
+                {
+                    console.log("Division");
+                    res.innerHTML = Division(input1,input2);
+                }
+                console.log("End")
+            }
+        </script>
+    </body>
+    
+</html>
