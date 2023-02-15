@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   
+    </head>
+    <body>
+        <h2 id="name" class="nikki">nikki</h2>
+        <p>change the name</p>
+        <button onclick="changeText(this)">ChangeText</button>
+        <button onclick="changeText(this)">ChangeColor</button>
+        <button onclick="changeText(this)">ChangeFont</button>
+        <script>
+            function changeText(changeaction){ 
+                console.log(changeaction);
+                if(changeaction.innerHTML == "ChangeText")
+                {
+                    document.getElementById("name").innerHTML="anji";
+
+                }
+                else if(changeaction.innerHTML == "ChangeColor")
+                {
+                    document.getElementById("name").style.color="red";
+                }
+                else
+                {
+                    document.getElementById("name").style.font="bold 55px GreatVibes";
+                }
+                // var document.getElementById("name").innerHTML = "Anji";  
+                // console.log("end");
+            }
+
+
+        </script>
+
+    </body>
+    
+</html>

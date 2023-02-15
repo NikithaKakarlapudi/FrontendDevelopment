@@ -1,0 +1,53 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>loop</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <h5>Addition of N numbers using for loop</h5>
+    <script>
+        var n = prompt("Enter no of numbers");
+        let sum=0;        
+        for(let counter=1;counter<=n; counter++){
+            let currentnum = prompt("Enter number : "+counter);
+            sum = sum + parseInt(currentnum);
+        }
+        document.write("<p> Sum of n numbers is "+sum+"</p>")
+    </script>
+    
+    <h5>Printing numbers from 1 to N using do while & exit if input is 'e'</h5>
+    <script>
+        let input=0;
+        do{  
+            let num = parseInt(input);         
+            if(num==0)
+            {
+                document.write("<p>***********************************************</p>");
+                
+            }
+            else{
+                document.write("<h6>Printing 1 to "+num+" numbers</h6>")
+            }
+            for(let i=1;i<=num;i++)
+            {                
+                document.write("<p>"+i+"</p>");
+            }
+            input = prompt("Enter a number or 'e' to exit");
+        }
+        while(input != 'e');
+        // first :count = 4
+        // Second :Count = 3
+        // third :Count = 2
+        // fourth :Count = 1
+        // fifth :Count = 0
+    </script> -->
+
+    </body>
+</html>

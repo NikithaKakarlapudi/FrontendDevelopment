@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>switch example</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </head>
+    <body>
+        <div class="container">
+            <h1> Student Percentage and Grade Calculator</h1>
+            <div class="form mt-4 col-sm-3">
+                <lable>Max Marks:</lable>
+                <input type="text" id="mm"  class="form-control form-control-sm" placeholder="max marks">
+            </div>
+            <div class="form  mt-2 col-sm-3">
+                <lable>Obtained Marks:</lable>
+                <input type="text" id="om"  class="form-control form-control-sm" placeholder="obtained">
+            </div><br>
+            <button id="btn_submit" type="submit" class="btn btn-primary" onclick="pg()">Submit</button>
+            <div class="form mt-2 col-sm-3">
+                <lable>Percentage:</lable>
+                <input type="text" id="Perc" class="form-control form-control-sm" placeholder="Percentage">
+            </div>
+            <div class="form  mt-2 col-sm-3">
+                <lable>Grade:</lable>
+                <input type="text" id="Grade"  class="form-control form-control-sm" placeholder="grade">
+            </div>
+
+        </div>
+        <script>
+           function pg(){
+                console.log("called pg");
+                var maxmarks = document.getElementById("mm").value;
+                var obtainedMarks = document.getElementById("om").value;
+
+                console.log(obtainedMarks +"/" +maxmarks);
+               var Percentage = (document.getElementById("om").value/document.getElementById("mm").value)*100;
+               console.log(Percentage);
+                document.getElementById("Perc").value = Percentage;
+               var Grade;
+               switch(Math.floor(Percentage/10))
+               {
+                     case 9: Grade = "A+"
+                          break;
+                     case 8: Grade = "A";
+                          break;
+                     case 7:  Grade = "B+";
+                          break;
+                     case 6: Grade = "B";
+                          break;
+                     case 5:  Grade = "C";
+                          break;
+                     case 4:  Grade = "D";
+                           break;
+                     case 3:
+                     case 2: 
+                     case 1:
+                     case 0:   
+                        Grade = "fail";
+                        break;
+               }
+               document.getElementById("Grade").value=Grade;
+           }
+
+
+        </script>
+    
+
+    </body>
+</html>
