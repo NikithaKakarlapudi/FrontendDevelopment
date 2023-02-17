@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Date</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            label, button, input{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h4>JavaScript new Date</h4>
+            <label>time:<span id="date"></span></label><br>
+            <label>time:<span id="date1"></span></label><br>
+            <label>time:<span id="date2"></span></label><br>
+            <label>time:<span id="date3"></span></label><br>
+            <label>time:<span id="date4"></span></label><br>
+            <label>time:<span id="date5"></span></label><br>
+            <label>Year:<span id="date6"></span></label><br>
+            <label>Year:<span id="date7"></span></label><br>
+            <label>To get the correct month number, you must add 1:<span id="date8"></span></label><br>
+            <label>To get the correct month number, you must add 1:<span id="date9"></span></label><br>
+            <label>Returns the minutes of a date as a number:<span id="date10"></span></label><br>
+            <label>Date:</label><br>
+            <input type="text" class="form-control" placeholder="enter date in yyyy-mm-dd format" id="date11">
+            <button class="btn btn-primary" onclick="GetDayFun()">Get Day</button>
+            <label>Day is : <span id="dateday"></span></label>
+            
+        </div>
+
+
+
+        <script>
+         function GetDayFun(){
+            const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var inputdate = document.getElementById("date11").value;
+            document.getElementById("dateday").innerHTML = days[new Date(inputdate).getDay()];
+         }
+        document.getElementById("date").innerHTML = new Date();
+        document.getElementById("date1").innerHTML = new Date("October 13, 2014 11:13:00");
+        document.getElementById("date2").innerHTML = new Date("0");
+        document.getElementById("date3").innerHTML = new Date().toDateString();
+        document.getElementById("date4").innerHTML = new Date().toUTCString();
+        document.getElementById("date5").innerHTML = new Date().toISOString();
+        document.getElementById("date6").innerHTML = new Date("2024-2-18").getFullYear();
+        document.getElementById("date7").innerHTML = new Date().getFullYear();
+        document.getElementById("date8").innerHTML = new Date("2023-2-17").getMonth() + 1;
+        document.getElementById("date9").innerHTML = new Date().getMonth() + 1;
+        document.getElementById("date10").innerHTML = new Date().getMinutes();
+        
+        </script>
+
+    </body>
+</html>
