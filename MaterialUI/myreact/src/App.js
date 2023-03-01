@@ -9,6 +9,10 @@ import BasicRatingExm from './muirating.js';
 import ContinuousSlidersExm from './muislider.js';
 import BasicSwitchesExm from './muiswitch.js';
 import FormpropsTextFields from './muitextfield.js';
+import ToggleButtonsExm from './muitogglebuttons.js';
+import  BoxComponent from './Layoutbox.js';
+import BasicGrid from './grid.js';
+import  TransferListExm from './trasnferlist.js';
 // import PickersExm from './muidateandtime.js';
 
 import BasicSelectExm from './muiselectexm';
@@ -24,6 +28,10 @@ function App() {
       <ContinuousSlidersExm></ContinuousSlidersExm>
       <BasicSwitchesExm></BasicSwitchesExm>
       <FormpropsTextFields/>
+      <ToggleButtonsExm/>
+      < BoxComponent/>
+      <BasicGrid/>
+      < TransferListExm/>
       {/* <BasicRatingExm></BasicRatingExm> */}
     
       
