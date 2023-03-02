@@ -13,6 +13,10 @@ import ToggleButtonsExm from './muitogglebuttons.js';
 import  BoxComponent from './Layoutbox.js';
 import BasicGrid from './grid.js';
 import  TransferListExm from './trasnferlist.js';
+import StackExm from './stack.js';
+import StandardImageListExm from './imagelist.js';
+import TitlebarImageListExm from './layoutimagelist.js';
+import CustomImageListExm from './layoutimage.js';
 // import PickersExm from './muidateandtime.js';
 
 import BasicSelectExm from './muiselectexm';
@@ -32,6 +36,10 @@ function App() {
       < BoxComponent/>
       <BasicGrid/>
       < TransferListExm/>
+      <StackExm/>
+      <StandardImageListExm/>
+      <TitlebarImageListExm/>
+      <CustomImageListExm/>
       {/* <BasicRatingExm></BasicRatingExm> */}
     
       
