@@ -17,7 +17,13 @@ import StackExm from './stack.js';
 import StandardImageListExm from './imagelist.js';
 import TitlebarImageListExm from './layoutimagelist.js';
 import CustomImageListExm from './layoutimage.js';
+import BottomNavigationExm from './bottomnavigation.js';
+import BreadcrumbsExm from './navbreadcrumbs.js';
+import DrawerExm from './drawercomponents.js';
+import ResponsiveDrawer from './drawer.js';
+import MiniDrawerExm from './navdrawer.js';
 // import PickersExm from './muidateandtime.js';
+
 
 import BasicSelectExm from './muiselectexm';
 function App() {
@@ -26,6 +32,9 @@ function App() {
       <ButtonGrp></ButtonGrp>
       <CheckboxExm></CheckboxExm>
       <div className="Appdiv">
+        <BasicRatingExm/>
+        <Layout/>
+        <BasicSelectExm/>
       <ComboBox></ComboBox>
       <FloatingActionButtons></FloatingActionButtons>
       <RadioButtonsGroup></RadioButtonsGroup>
@@ -40,6 +49,11 @@ function App() {
       <StandardImageListExm/>
       <TitlebarImageListExm/>
       <CustomImageListExm/>
+      <BottomNavigationExm/>
+      <BreadcrumbsExm/>
+      <DrawerExm/>
+      <ResponsiveDrawer/>
+      <MiniDrawerExm/>
       {/* <BasicRatingExm></BasicRatingExm> */}
     
       
