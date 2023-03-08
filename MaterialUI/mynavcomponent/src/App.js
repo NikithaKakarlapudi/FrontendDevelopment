@@ -13,7 +13,15 @@ import ButtonAppBarExm from './surfaceappbar.js';
 import BottomAppBarExm from './surfaceappbar1.js';
 import ComplexInteractionCardsExm from './surfacecards.js';
 import SimplePaperExm from './surfacepaper.js';
+import AlertsExm from './feedbackalerts.js';
+import SimpleDialogExm from './feedbackdialogs.js';
+import CircularExm from './feedbakprogress.js';
+import VariantsExm from './feebbackskeleton.js';
+import SnackbarExm from './feedbacksnackbar.js'; 
+import FacebookExm from './feebbackskeleton1.js';
 function App() {
+
+
   return (
     <div className="App">
       <LinksExm/>
@@ -33,6 +41,18 @@ function App() {
   <ComplexInteractionCardsExm/>
       <br/>
       <SimplePaperExm/>
+      <br/>
+      <AlertsExm/>
+      <br/>
+      <SimpleDialogExm/>
+      <br/>
+      <CircularExm/>
+      <br/>
+      <VariantsExm/>
+      <br/>
+      <SnackbarExm/>
+      <br/>
+      <FacebookExm/>
     </div>
   );
 }
