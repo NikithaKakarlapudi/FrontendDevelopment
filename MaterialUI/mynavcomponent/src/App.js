@@ -19,6 +19,16 @@ import CircularExm from './feedbakprogress.js';
 import VariantsExm from './feebbackskeleton.js';
 import SnackbarExm from './feedbacksnackbar.js'; 
 import FacebookExm from './feebbackskeleton1.js';
+import ImageAvatarsExm from './datadisplayavatar.js';
+import SimpleBadgeExm from './datadisplaybadge.js';
+import ClickableChipsExm from './datadisplaychip.js';
+import ListDividersExm from './datadisplaydividers.js';
+import NestedListExm from './datadisplaylist.js';
+import CheckboxListSecondaryExm from './datadisplaylist1.js';
+import PositionedTooltipExm from './datadisplaytooltip.js';
+import BasicTableExm from './datadisplaytable.js';
+import DataTableExm from './datadisplaytable1.js';
+import SpanningTableExm from './datadisplaytable2.js';
 function App() {
 
 
@@ -53,6 +63,26 @@ function App() {
       <SnackbarExm/>
       <br/>
       <FacebookExm/>
+      <br/>
+      <ImageAvatarsExm/>
+      <br/>
+      <SimpleBadgeExm/>
+      <br/>
+      <ClickableChipsExm/>
+      <br/>
+      <ListDividersExm/>
+      <br/>
+      <NestedListExm/>
+      <br/>
+      <CheckboxListSecondaryExm/>
+      <br/>
+      <PositionedTooltipExm/>
+      <br/>
+      <BasicTableExm/>
+      <br/>
+      <DataTableExm/>
+      <br/>
+      <SpanningTableExm/>
     </div>
   );
 }
