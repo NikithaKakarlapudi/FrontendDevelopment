@@ -29,10 +29,17 @@ import PositionedTooltipExm from './datadisplaytooltip.js';
 import BasicTableExm from './datadisplaytable.js';
 import DataTableExm from './datadisplaytable1.js';
 import SpanningTableExm from './datadisplaytable2.js';
+import BasicModalExm from './utilsmodels.js';
+import BasicPopoverExm from './popovers.js';
+import SimplePopperExm from './poppers';
+import SimpleCollapseExm from './Transitions.js';
+import BasicMasonryExm from './labmasonry.js';
+import MasonryExm from './labmasonry1.js';
+import BasicTimelineExm from  './timelines.js';
+import MultiSelectTreeViewExm from './treeview.js'
+import GmailTreeViewExm from './treeview1.js';
 function App() {
-
-
-  return (
+return (
     <div className="App">
       <LinksExm/>
       <MenuExm/>
@@ -83,6 +90,24 @@ function App() {
       <DataTableExm/>
       <br/>
       <SpanningTableExm/>
+      <br/>
+      <BasicModalExm/>
+      <br/>
+      <BasicPopoverExm/> 
+      <br/>
+      <SimplePopperExm/>
+      <br/>
+      <SimpleCollapseExm/>
+      <br/>
+      <BasicMasonryExm/>
+      <br/>
+      <MasonryExm/>
+      <br/>
+      <BasicTimelineExm/>
+      <br/>
+      <MultiSelectTreeViewExm/>
+      <br/>
+      <GmailTreeViewExm/>
     </div>
   );
 }
