@@ -38,6 +38,9 @@ import MasonryExm from './labmasonry1.js';
 import BasicTimelineExm from  './timelines.js';
 import MultiSelectTreeViewExm from './treeview.js'
 import GmailTreeViewExm from './treeview1.js';
+
+import DataGridExm from './datagrid.js';
+import RenderCellGrid from './datagridrender.js';
 function App() {
 return (
     <div className="App">
@@ -108,6 +111,11 @@ return (
       <MultiSelectTreeViewExm/>
       <br/>
       <GmailTreeViewExm/>
+      <br/>
+      <DataGridExm/>
+        <br/>
+        <br/>
+        <RenderCellGrid/>
     </div>
   );
 }
