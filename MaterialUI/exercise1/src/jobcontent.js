@@ -34,9 +34,10 @@ export default function JobContent() {
                     <Divider />
                     <Grid item>
                     <Typography variant='subtitle2'>Ship Details</Typography>
+                    <Typography variant='subtitle2'>     </Typography>
+                    <Typography variant='subtitle2'>    </Typography>
                     </Grid>
-                    <br/>
-                    <br/>
+                  
                     <Divider />
                     <Grid item>
                     <Typography variant='subtitle2'>Description</Typography>
@@ -70,10 +71,8 @@ export default function JobContent() {
                     </Grid>
                     <Divider />
                     <Grid item>
-                    <Typography variant='subtitle2'>Chembulk gibriater</Typography>
-                    <Typography variant='subtitle2'>20000 DWT</Typography>
-                    <Typography variant='subtitle2'>2010 Built</Typography>
-                    </Grid>
+                    <Typography variant='subtitle2'>Chembulk gibriater<br/>20000 DWT<br/>2010 Built</Typography>
+                     </Grid>
                     <Divider />
                     <Grid item>
                     <Typography variant='subtitle2'>donec egestas vitae mi et feugiat.Quisque urna mi,vestibuium sit amet congue quits,imprediet quis dui,pellentesque rhoncus,justo et sollicitudin feugiat ante urna fringile nisl,eu laoreet leo leo in velit.ante urna fringilla nisl,eu laoreet leo leo in velit</Typography>

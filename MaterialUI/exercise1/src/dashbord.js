@@ -11,7 +11,9 @@ import PropTypes from 'prop-types';
 import { red } from '@material-ui/core/colors';
 import Jobs from './jobs.js';
 import FacebookShare from './sharefacebook.js';
-import JobContent from './jobcontent.js'
+import JobContent from './jobcontent.js';
+import MiddleOne from './middleone.js';
+import { color } from '@mui/system';
 
 //import { ColorModeContext, tokens } from "../../theme";
 
@@ -45,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     margin:10
   },
   vertical: {
-    
+    background:'white'
   },
   horizontal: {
     display: "grid",
@@ -99,6 +101,7 @@ function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
+    
   };
 }
 
@@ -123,6 +126,7 @@ function Dashboard() {
           <Grid container spacing={2}>
             <Grid xs={12}>
             <TopMenuExm/>
+            <MiddleOne/>
             </Grid>
 
             {/* <Grid xs={12}>
@@ -151,9 +155,13 @@ function Dashboard() {
             </Grid> */}
 
             <Grid xs={12}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{mt:'100px'}}>
-    <Tab label="Description" {...a11yProps(0)} />
+            <Box sx={{ borderBottom: 1,
+               borderColor: 'divider'
+               
+               
+               }}>
+  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{mt:'100px', }} indicatorColor="primary"  textColor="primary">
+    <Tab label="Description"  {...a11yProps(0)} />
     <Tab label="Insight" {...a11yProps(1)} />
     <Tab label="Applicants" {...a11yProps(2)} />
     <Tab label="Notifications" {...a11yProps(3)} />

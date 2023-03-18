@@ -7,7 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-import MoreIcon from '@mui/icons-material/MoreVert';
+import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 
 export default function Jobs() {
   return (
@@ -51,8 +51,11 @@ export default function Jobs() {
             aria-label="display more actions"
             edge="end"
             color="inherit"
+            justifycontent="center"
+            disabled
+
            >
-          <MoreIcon/>
+          <MoreHorizOutlinedIcon/>
       </IconButton>
     </List>
   );

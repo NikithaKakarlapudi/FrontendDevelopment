@@ -14,11 +14,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import Badge from '@mui/material/Badge';
 import ContentPasteGoOutlinedIcon from '@mui/icons-material/ContentPasteGoOutlined';
 
-
-
 function appBarLabel(label) {
   return (
-    <Toolbar>
+    <Toolbar style={{spacing:"2"}}>
         <IconButton size="large" aria-label="search" color="inherit">
             <SearchIcon />
           </IconButton>
@@ -26,10 +24,18 @@ function appBarLabel(label) {
         <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {label}
         </Typography>
-        <Typography variant="body1" component="div" sx={   
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+              <Tab label="Blog" {...a11yProps(0)} />
+              <Tab label="Questions" {...a11yProps(1)} />
+              <Tab label="Companies" {...a11yProps(2)} />
+              <Tab label="Contacts" {...a11yProps(2)} />
+            </Tabs>
+        </Box>
+
+ {/* <Typography variant="body1" component="div" sx={   
             { flexGrow: 1 }}>
               Blog
-            {/* <Link href="#">new</Link> */}
         </Typography>
         <Typography variant="body1" component="div" sx={   
             { flexGrow: 1 }}>
@@ -42,7 +48,7 @@ function appBarLabel(label) {
         <Typography variant="body1" component="div" sx={   
             { flexGrow: 1 }}>
               Contacts
-        </Typography>
+        </Typography> */}
         <MenuItem>
            <IconButton
                     size="large"
@@ -58,7 +64,7 @@ function appBarLabel(label) {
                     size="large"
                     aria-label="show 4 new mails"
                     color="inherit">
-                <Badge badgeContent={4} color="error">
+                <Badge badgeContent={4} color="info">
                 <MailIcon />
                 </Badge>
             </IconButton>
