@@ -71,15 +71,15 @@ export default function Sidebar() {
       onChange={handleChange}
       aria-label="icon position tabs example"
       orientation="vertical"
-    
+      sx={{}}
       
     >
     
-     <Tab sx={{color:'white', marginTop:'2'}} icon={<LaptopWindowsIcon />} label="DASHBOARD" />
+     <Tab sx={{color:'white', marginTop:'20px'}} icon={<LaptopWindowsIcon />} label="DASHBOARD" />
     
-     <Tab sx={{color:'white'}} icon={<BackupTableRoundedIcon />} label="JOBS" />
-      <Tab sx={{color:'white'}} icon={<TextSnippetOutlinedIcon />} iconPosition="top" label="SEA DOCS" />
-      <Tab sx={{color:'white'}} icon={<PeopleAltOutlinedIcon/>} iconPosition="top" label="CONNECTIONS" /> 
+     <Tab sx={{color:'white', marginTop:'20px'}} icon={<BackupTableRoundedIcon />} label="JOBS" />
+      <Tab sx={{color:'white', marginTop:'20px'}} icon={<TextSnippetOutlinedIcon />} iconPosition="top" label="SEA DOCS" />
+      <Tab sx={{color:'white', marginTop:'20px'}} icon={<PeopleAltOutlinedIcon/>} iconPosition="top" label="CONNECTIONS" /> 
     
     </Tabs> 
       </Drawer>

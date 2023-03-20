@@ -14,24 +14,40 @@ import MailIcon from '@mui/icons-material/Mail';
 import Badge from '@mui/material/Badge';
 import ContentPasteGoOutlinedIcon from '@mui/icons-material/ContentPasteGoOutlined';
 
-function appBarLabel(label) {
+import { makeStyles } from '@material-ui/core/styles';
+import {Tabs,Tab} from '@mui/material';
+
+const useStyles = makeStyles((theme) => ({
+  
+  tabs: {
+    flexGrow: 1,
+    marginLeft:'10%',
+  },
+}));
+
+
+
+function TopMenuExm() {
+  const classes = useStyles();
+    const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
-    <Toolbar style={{spacing:"2"}}>
+    <Stack spacing={2} sx={{ flexGrow: 1 }}>
+        <AppBar position="static" sx={{background:'white',color:'grey'}}>
+        <Toolbar style={{spacing:"2"}}>
         <IconButton size="large" aria-label="search" color="inherit">
             <SearchIcon />
           </IconButton>
 
-        <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            {label}
-        </Typography>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="Blog" {...a11yProps(0)} />
-              <Tab label="Questions" {...a11yProps(1)} />
-              <Tab label="Companies" {...a11yProps(2)} />
-              <Tab label="Contacts" {...a11yProps(2)} />
-            </Tabs>
-        </Box>
+        
+          <Tabs value={value} onChange={handleChange} className={classes.tabs} aria-label="tabs">
+          <Tab label="Blog" />
+          <Tab label="Questions" />
+          <Tab label="Companies" />
+          <Tab label="Contact" />
+          </Tabs>
 
  {/* <Typography variant="body1" component="div" sx={   
             { flexGrow: 1 }}>
@@ -81,27 +97,7 @@ function appBarLabel(label) {
 
 
     </Toolbar>
-  
-  );
-}
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main:'#fefefe',
-    },
-  },
-});
-
-function TopMenuExm() {
-  return (
-    <Stack spacing={2} sx={{ flexGrow: 1 }}>
-      <ThemeProvider theme={darkTheme}>
-        <AppBar position="static" color="primary" enableColorOnDark>
-          {appBarLabel('')} 
         </AppBar>
-      </ThemeProvider>
      
     </Stack>
   );

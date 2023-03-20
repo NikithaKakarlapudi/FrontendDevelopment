@@ -30,21 +30,14 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    //padding: theme.spacing(3),
     background:'#eaeef2',
-    height:1000
-  },
-  itemlist:{
-    height:'50px',
-    padding:'5px',
-    marginBottom:'10px',
-    display:'flex',
-    alignItems:'center',
-    alignContent:'center'
+    //background:'red',
+    height:'100%'
   },
   container: {
     height: "100vh",
-    margin:10
+  
   },
   vertical: {
     background:'white'
@@ -55,22 +48,26 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: "1fr 4fr",
   },
   component1: {
-    margin : 15
+    margin : 15,
+    background:'blue',
     
   },
   component2: {
-    margin : 15
+    margin : 15,
+    background:'green'
   },
+  contenttabs:{
+    marginLeft: 20,
+    marginRight:20
+  },
+  layout:{
+    padding:5,
+    
+  }
 
 }));
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -120,101 +117,46 @@ function Dashboard() {
     <Box className={classes.root} >
       {/* Sidebar */}
       <Sidebar/>
-
+      
       {/* Main content */}
       <Box component="main" className={classes.content}>
-          <Grid container spacing={2}>
-            <Grid xs={12}>
-            <TopMenuExm/>
+      <TopMenuExm/>
+          <Grid container spacing={2} >
+            <Grid item xs={12} >
+            
             <MiddleOne/>
             </Grid>
 
-            {/* <Grid xs={12}>
-              <Box display="flex" justifyContent="space-between" p={2} flexDirection="column">
-                <Box display="flex">
-                  <Typography variant='h5'>Header</Typography>
-                  <Typography variant='subtitle2'>Sub title</Typography>
-                </Box>
-                <Box display="flex">
-                  
-                <IconButton >
-                    <DarkModeOutlinedIcon />
-                  
-                </IconButton>
-                <IconButton>
-                  <NotificationsOutlinedIcon />
-                </IconButton>
-                <IconButton>
-                  <SettingsOutlinedIcon />
-                </IconButton>
-                <IconButton>
-                  <PersonOutlinedIcon />
-                </IconButton>
-                </Box>
-              </Box>              
-            </Grid> */}
-
-            <Grid xs={12}>
+            
+            <Grid item xs={12} className={classes.contenttabs}>
             <Box sx={{ borderBottom: 1,
                borderColor: 'divider'
-               
-               
                }}>
-  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{mt:'100px', }} indicatorColor="primary"  textColor="primary">
-    <Tab label="Description"  {...a11yProps(0)} />
-    <Tab label="Insight" {...a11yProps(1)} />
-    <Tab label="Applicants" {...a11yProps(2)} />
-    <Tab label="Notifications" {...a11yProps(3)} />
-  </Tabs>
-</Box>
-<TabPanel value={value} index={0}>
-<Layout/>
-</TabPanel>
-<TabPanel value={value} index={1}>
-<Card sx={{ minWidth: 500, p:2,m:5 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          job Description
-        </Typography>
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>master</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-               <td>Ship type</td>
-               <td>Chemical Tanker</td>
-            </tr>
-          </tbody>
-        </table>
-        {/* <Typography variant="h5" component="div">
-          Rank                        master
-        </Typography>
-        <Divider />
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
-        </Typography>
-        <Divider />
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography> */}
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-</TabPanel>
-<TabPanel value={value} index={2}>
-      
-</TabPanel>
-<TabPanel value={value} index={3}>
-  
-</TabPanel>
+            <Box >
+                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{my:'3',mx:'3' }} indicatorColor="primary"  textColor="primary">
+              <Tab label="Description"  {...a11yProps(0)} />
+              <Tab label="Insight" {...a11yProps(1)} />
+              <Tab label="Applicants" {...a11yProps(2)} />
+              <Tab label="Notifications" {...a11yProps(3)} />
+            </Tabs>
+           </Box>
+            
+          </Box>
+          <TabPanel value={value} index={0}>
+            <Box className={classes.layout}>
+            <Layout />
+            </Box>
+          
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+                
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            
+          </TabPanel>
             </Grid>
           </Grid>
       </Box>
@@ -225,22 +167,43 @@ function Dashboard() {
 
 
 function Layout() {
-  const classes = useStyles();
 
-  return (
-    <Grid container className={classes.container}>
-      <Grid item xs={8} className={classes.vertical}>
-        <JobContent/>
+   return (
+
+    <Box margin={3} >
+      <Grid container spacing={2}>
+      <Grid item xs={12} md={8}>
+        <Card sx={{height:'700px'}}>
+            <JobContent/>
+        </Card>
       </Grid>
-      <Grid item xs={4} className={classes.horizontal}>
-        <Grid item className={classes.component1} >
-          <FacebookShare/>
+      <Grid item container xs={12} md={4} spacing={2}>
+        <Grid item xs={12}>
+        <Card >
+            <FacebookShare/>
+        </Card>
         </Grid>
-        <Grid item className={classes.component2}>
-          <Jobs/>
+        <Grid item xs={12}>
+        <Card >
+            <Jobs/>
+        </Card>
         </Grid>
       </Grid>
     </Grid>
+      </Box>  
+  //   <Grid container className={classes.container}>
+  //     <Grid item xs={8} className={classes.vertical}>
+  //       <JobContent/>
+  //     </Grid>
+  //     <Grid item xs={4} className={classes.horizontal}>
+  //       <Grid item className={classes.component1} >
+  //         <FacebookShare/>
+  //       </Grid>
+  //       <Grid item className={classes.component2}>
+  //         <Jobs/>
+  //       </Grid>
+  //     </Grid>
+  //   </Grid>
   );
 }
 

@@ -12,20 +12,23 @@ import FiberManualRecordSharpIcon from '@mui/icons-material/FiberManualRecordSha
 
 export default function MiddleOne() {
   return (
-    <Box sx={{ width: '100%', maxWidth: 1000, bgcolor: '#eaeef2'  }}>
-      <Box sx={{ my:1, mx: 2 }}>
+    <Box sx={{ width: '100%', bgcolor: '#eaeef2'  }}>
+      <Box sx={{ my:3, mx: 3 }}>
         <Grid container alignItems="center">
-          <Grid item xs={8}>
+          <Grid item xs={9}>
             <Typography gutterBottom variant="h6" component="div">
               Master
             </Typography>
+            <Typography color="text.secondary" variant="body2">
+            Chemical Tanker
+          </Typography> 
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
              <Button variant="contained" startIcon={<FiberManualRecordSharpIcon style={{color: 'green'}}/>} size="small" sx={{margin:'5px', borderRadius:'20px',color:'grey',background:'white'}} >
                active
              </Button>
 
-              <Fab size="small" color="#fff" aria-label="add" sx={{margin:'5px 10px',backgroundColor:'white'}}>
+              <Fab size="small" color="#fff" aria-label="add"  sx={{margin:'5px 10px',backgroundColor:'white'}}>
               < RefreshIcon/>
               </Fab>
 
@@ -39,9 +42,7 @@ export default function MiddleOne() {
             </Grid>
 
            </Grid>
-         <Typography color="text.secondary" variant="body2">
-            Chemical Tanker
-          </Typography> 
+         
       </Box>
      
     </Box>

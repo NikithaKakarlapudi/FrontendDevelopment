@@ -17,21 +17,19 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 
 export default function FacebookShare() {
   return (
-    <Box sx={{ flexGrow: 1, overflow: 'hidden' }}>
+    <Box sx={{ flexGrow: 1, overflow: 'hidden'}}>
       <StyledPaper
         sx={{
           my: 1,
           mx: 'auto',
-        
-         
-
+          
         }}
       >
-        <Grid container wrap="nowrap" spacing={2}>
+        <Grid container wrap="nowrap" spacing={2} sx={{padding:'5px',marginLeft:'5px'}}>
           <Grid item>
           <Avatar alt="facebook" src="https://1000logos.net/wp-content/uploads/2016/11/fb-logo.jpg" />
           </Grid>
-          <Grid item xs zeroMinWidth>
+          <Grid item marginTop={1}> 
             <Typography>Share on Facebook</Typography>
             
           </Grid>

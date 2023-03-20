@@ -16,6 +16,8 @@ export default function Jobs() {
         width: '100%',
         maxWidth: 360,
         bgcolor: 'background.paper',
+        padding:'10px',
+        alignContent:'center'
       }}
     >
       <Typography>Other Jobs</Typography>
@@ -53,9 +55,10 @@ export default function Jobs() {
             color="inherit"
             justifycontent="center"
             disabled
+            
 
            >
-          <MoreHorizOutlinedIcon/>
+          <MoreHorizOutlinedIcon sx={{marginLeft:'150px'}}/>
       </IconButton>
     </List>
   );
