@@ -4,16 +4,14 @@ import {  Box, Paper, Grid, Tab, Tabs, Card, CardContent, CardActions, CardMedia
 
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import TopMenuExm from './topmenu.js';
+import TopMenuExm from './topbar.js';
 import Sidebar from './sidebar.js';
 
 import PropTypes from 'prop-types';
 import { red } from '@material-ui/core/colors';
-import Jobs from './jobs.js';
-import FacebookShare from './sharefacebook.js';
-import JobContent from './jobcontent.js';
-import MiddleOne from './middleone.js';
+import MiddleOne from './header.js';
 import { color } from '@mui/system';
+import Profile from './profile.js';
 
 //import { ColorModeContext, tokens } from "../../theme";
 
@@ -136,10 +134,9 @@ function Dashboard() {
                }}>
             <Box >
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{my:'3',mx:'3' }} indicatorColor="primary"  textColor="primary">
-              <Tab label="Description"  {...a11yProps(0)} />
-              <Tab label="Insight" {...a11yProps(1)} />
-              <Tab label="Applicants" {...a11yProps(2)} />
-              <Tab label="Notifications" {...a11yProps(3)} />
+              <Tab label="Connection"  {...a11yProps(0)} />
+              <Tab label="Find New Connection" {...a11yProps(1)} />
+              
             </Tabs>
            </Box>
             
@@ -153,12 +150,7 @@ function Dashboard() {
           <TabPanel value={value} index={1}>
 
           </TabPanel>
-          <TabPanel value={value} index={2}>
-                
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            
-          </TabPanel>
+          
             </Grid>
           </Grid>
       </Box>
@@ -173,25 +165,33 @@ function Layout() {
    return (
 
     <Box margin={3} >
-      <Grid container spacing={2}>
-      <Grid item xs={12} md={8}>
-        <Card sx={{height:'700px'}}>
-            <JobContent/>
-        </Card>
+      <Grid container spacing={1}>
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      <Grid item xs={12} md={3}>
+      <Profile/>
+      </Grid >
+      
       </Grid>
-      <Grid item container xs={12} md={4} spacing={2}>
-        <Grid item xs={12}>
-        <Card >
-            <FacebookShare/>
-        </Card>
-        </Grid>
-        <Grid item xs={12}>
-        <Card >
-            <Jobs/>
-        </Card>
-        </Grid>
-      </Grid>
-    </Grid>
       </Box>  
   //   <Grid container className={classes.container}>
   //     <Grid item xs={8} className={classes.vertical}>
