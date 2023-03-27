@@ -1,15 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import TopMenuExm from './topbar.js';
-import DividerStack from './overview.js';
-import Teams from './teams.js';
+
+import Dashboard from './dashboard.js';
 
 function App() {
   return (
     <div className="App">
-     <TopMenuExm/>
+      <Dashboard/>
+     {/* <TopMenuExm/>
      <DividerStack/>
      <Teams/>
+     <TaskData/> */}
+    
     </div>
   );
 }

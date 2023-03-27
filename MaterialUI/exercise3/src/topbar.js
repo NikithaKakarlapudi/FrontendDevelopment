@@ -20,26 +20,52 @@ import Button from '@mui/material/Button';
 import AlarmIcon from '@mui/icons-material/Alarm';
 import PausePresentationOutlinedIcon from '@mui/icons-material/PausePresentationOutlined';
 import NotificationsNoneSharpIcon from '@mui/icons-material/NotificationsNoneSharp';
+import { Drawer } from '@mui/material';
+import CustomizedTimeline from './activitytimeline.js';
+
 
 const useStyles = makeStyles((theme) => ({
-  
+appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+    },
   tabs: {
     flexGrow: 1,
     marginLeft:'10%',
   },
+  drawer: {
+    width: '20%',
+    marginLeft:'5px',
+    flexShrink: 0, 
+    background:'#626b87',   
+  },
+  drawerPaper: {
+    marginLeft:'5px',
+    width: '20%',
+    background:'#626b87',
+
+
+  },
+  toolbar: theme.mixins.toolbar,
+ 
 }));
 
 
 
 function TopMenuExm() {
   const classes = useStyles();
-    const [value, setValue] = React.useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const [open, setOpen] = React.useState(false);
+      
+        const handleDrawerOpen = () => {
+          setOpen(true);
+        };
+      
+        const handleDrawerClose = () => {
+          setOpen(false);
+        };
+
   return (
     <Stack spacing={3} sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{background:'#626b87',color:'white'}}>
+        <AppBar position="static" className={classes.appBar} sx={{background:'#626b87',color:'white'}}>
         <Toolbar style={{spacing:"2"}}>
         <Typography variant="h6" color="inherit" component="div" sx={{ mr: 2 }}>
             tackkle
@@ -82,16 +108,15 @@ function TopMenuExm() {
             size="small"
             aria-label="show 4 new mails"
             color="inherit">
-            <Badge badgeContent={4} color="info">
+            <Badge badgeContent={4} color="info" >
              < NotificationsNoneSharpIcon/> 
             </Badge>
         </IconButton>
     </MenuItem>
-    <Typography sx={{flexGrow:5}}>
 
-        </Typography>
     </Toolbar>
         </AppBar>
+        
      
     </Stack>
   );

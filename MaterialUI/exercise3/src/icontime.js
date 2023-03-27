@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Typography, Icon } from '@material-ui/core';
+import { Grid, Typography, Icon, IconButton,Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -13,7 +14,8 @@ function IconTime({icon,text}) {
   const classes = useStyles();
 
   return (
-    <Grid container alignItems="center">
+    <Box>
+    <Grid container alignItems="center" >
       <Grid item>
         {icon}
       </Grid>
@@ -21,10 +23,12 @@ function IconTime({icon,text}) {
         <Typography variant="body1">{text}</Typography>
       </Grid>
       <Grid item>
-      {icon}
-        {/* <KeyboardArrowDownRoundedIcon/> */}
+        {<IconButton>         
+        < KeyboardArrowDownOutlinedIcon/>
+        </IconButton>}
       </Grid>
     </Grid>
+    </Box>
   );
 }
 

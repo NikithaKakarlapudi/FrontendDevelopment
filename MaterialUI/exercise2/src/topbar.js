@@ -49,22 +49,7 @@ function TopMenuExm() {
           <Tab label="Contact" />
           </Tabs>
 
- {/* <Typography variant="body1" component="div" sx={   
-            { flexGrow: 1 }}>
-              Blog
-        </Typography>
-        <Typography variant="body1" component="div" sx={   
-            { flexGrow: 1 }}>
-              Questions
-        </Typography>
-        <Typography variant="body1" component="div" sx={   
-            { flexGrow: 1 }}>
-              Companies
-        </Typography>
-        <Typography variant="body1" component="div" sx={   
-            { flexGrow: 1 }}>
-              Contacts
-        </Typography> */}
+ 
         <MenuItem>
            <IconButton
                     size="large"

@@ -16,7 +16,10 @@ import IconText from './icontext.js';
 import IconTime from './icontime.js';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
-
+import { deepPurple,} from '@mui/material/colors';
+import { IconButton } from '@material-ui/core';
+import { Box } from '@mui/system';
+import CustomBoxHeader from './boxheader.js'
 
 
 
@@ -24,77 +27,88 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 
 export default function Teams() {
     return (
-      <TableContainer component={Paper} sx={{padding:"20px",margin:"30px",width:"80%"}}>
+      <Box sx={{padding:"0px",margin:"30px",width:"80%"}}>
+        <CustomBoxHeader title='Team Members' subtitle='Sort by:Recent'/>
+
+        <TableContainer component={Paper} >
         <Table sx={{ Width: 500 }} 
         aria-label="simple table">
           
         <TableBody>
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
-                <Profile icon="https://th.bing.com/th/id/OIP.Z306v3XdxhOaxBFGfHku7wHaHw?pid=ImgDet&rs=1" name="Mark Spencer"/>
+                <Profile icon="https://th.bing.com/th/id/OIP.Fpd9zMqEU44M94-V0lv0egHaHa?pid=ImgDet&w=930&h=930&rs=1" name="Mark Spencer"/>
               </TableCell>  
              <TableCell >
-                <IconText icon={<LocalOfferOutlinedIcon/>} text="Design Development"/>
+                <IconText icon={<LocalOfferOutlinedIcon color="secondary"/>} text="Design Development"/>
             </TableCell>
               <TableCell>
-                <IconText icon={<AccessTimeOutlinedIcon/>} text="This Week: 1h:12m"/>
+                <IconTime icon={<AccessTimeOutlinedIcon/>} text="This Week: 1h:12m" />
               </TableCell>
             <TableCell align="right">
                 <AvatarGroup>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-                  <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+                <Avatar sx={{ bgcolor: "#ff4081" }}>B</Avatar>
+                <Avatar sx={{ bgcolor:  "#4fc3f7"}}>B</Avatar>
+                <Avatar sx={{ bgcolor: "#4db6ac" }}>G</Avatar>
                 </AvatarGroup>
             </TableCell>
             <TableCell>
-                 <MoreIcon/>
+              <IconButton  disabled>
+                   <MoreIcon/>
+              </IconButton>
             </TableCell>
         </TableRow>
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
-                <Profile icon="https://th.bing.com/th/id/OIP.Z306v3XdxhOaxBFGfHku7wHaHw?pid=ImgDet&rs=1" name="Rebbeca k.Quinn"/>
+                <Profile icon="https://i.pinimg.com/280x280_RS/8e/ad/7f/8ead7f2ddacb8725cdaa2ed8c603759f.jpg" name="Rebbeca k.Quinn"/>
               </TableCell>  
              <TableCell align="right">
-                <IconText icon={<LocalOfferOutlinedIcon/>} text="Copywritting,Photography"/>
+                <IconText icon={<LocalOfferOutlinedIcon color="secondary"/>} text="Copywritting,Photography"/>
             </TableCell>
               <TableCell align="right">
-                <IconText icon={<AccessTimeOutlinedIcon/>} text="This Week: 9h:25m"/>
+                <IconTime icon={<AccessTimeOutlinedIcon/>} text="This Week: 9h:25m"/>
               </TableCell>
             <TableCell align="right">
                 <AvatarGroup>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-                  
+                <Avatar sx={{ bgcolor: deepPurple[500] }}>Z</Avatar>
+                <Avatar sx={{ bgcolor: "#4fc3f7" }}>B</Avatar>
+                
                 </AvatarGroup>
             </TableCell>
             <TableCell>
+              <IconButton  disabled >
                  <MoreIcon/>
-            </TableCell>
-        </TableRow>
-
-
-        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell component="th" scope="row">
-                <Profile icon="https://th.bing.com/th/id/OIP.Z306v3XdxhOaxBFGfHku7wHaHw?pid=ImgDet&rs=1" name="Damon Martin"/>
-              </TableCell>  
-             <TableCell align="right">
-                <IconText icon={<LocalOfferOutlinedIcon/>} text="Design Development"/>
-            </TableCell>
-              <TableCell align="right">
-                <IconText icon={<AccessTimeOutlinedIcon/>} text="This Week: 10h:33m"/>
-              </TableCell>
-            <TableCell align="right">
-                <AvatarGroup>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              </IconButton>
                  
+            </TableCell>
+        </TableRow>
+
+
+        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              <TableCell component="th" scope="row">
+                <Profile icon="https://th.bing.com/th/id/OIP.p9EwHva9inuIotqUpk3G6QHaHa?pid=ImgDet&w=540&h=540&rs=1" name="Damon Martin"/>
+              </TableCell>  
+             <TableCell align="right">
+                <IconText icon={<LocalOfferOutlinedIcon color="secondary"/>} text="Design Development"/>
+            </TableCell>
+              <TableCell align="right">
+                <IconTime icon={<AccessTimeOutlinedIcon/>} text="This Week: 10h:33m"/>
+              </TableCell>
+            <TableCell align="right">
+                <AvatarGroup>
+                   <Avatar sx={{ bgcolor: "#c0ca33" }}>s</Avatar>
                 </AvatarGroup>
             </TableCell>
             <TableCell>
-                 <MoreIcon/>
+                    <IconButton disabled >
+                    <MoreIcon/>
+                    </IconButton>
             </TableCell>
         </TableRow>
         </TableBody>
         </Table>
       </TableContainer>
+      </Box>
+      
     );
   }
