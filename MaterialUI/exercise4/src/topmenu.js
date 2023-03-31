@@ -10,7 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Badge from '@mui/material/Badge';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
@@ -26,7 +26,7 @@ function appBarLabel(label) {
                 </IconButton>
                 <IconButton>
                     <SearchIcon/>
-                    <Typography>search for any Document or emoloye (wayne enterprice)</Typography>
+                    <Typography>search for any Document or Emoloyee (Wayne Enterprice)</Typography>
                     <ErrorOutlineOutlinedIcon/>
                 </IconButton>
 
@@ -40,11 +40,15 @@ function appBarLabel(label) {
                     <IconButton
                         size="large"
                         aria-label="show 4 new mails"
-                        color="inherit"
+                        style={{color:"blue"}}
+                       
                     >
-                    <Badge badgeContent={4} color="primary">
-                       <NotificationsNoneOutlinedIcon />
-                    </Badge>
+                        <Badge badgeContent={4} >
+                          <NotificationsIcon />
+                        </Badge>
+                    {/* <Badge badgeContent={4}  style={{color:"primary"}} >
+                       <NotificationsNoneOutlinedIcon   style={{color:"blue"}}/>
+                    </Badge> */}
                     </IconButton>
                     <IconButton
                         size="large"

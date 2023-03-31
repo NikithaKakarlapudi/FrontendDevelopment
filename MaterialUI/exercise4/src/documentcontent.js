@@ -7,7 +7,9 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Card, CardContent, CardHeader, IconButton } from '@material-ui/core';
 import { Grid } from "@mui/material";
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import Documentlist from './document.js'
+import Documentlist from './document.js';
+import  PrevNextButtons from './pagination.js';
+
 
 export default function DocumentContent() {
   return (
@@ -30,11 +32,14 @@ export default function DocumentContent() {
                 <ArrowDropDownIcon/>
             </Typography>
         </Box>
-
+         
 
         </Box>
-        <Box>
+        <Box marginTop={4} >
             <Documentlist/>
+        </Box>
+        <Box>
+            < PrevNextButtons/>
         </Box>
     </Box>
   );

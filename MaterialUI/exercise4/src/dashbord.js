@@ -10,12 +10,12 @@ export default function DashBord() {
 
     <Box sx={{}}>
     <Grid container spacing={0} sx={{marginTop:'60px'}}>
-        <Grid item xs={4}>
-          <Box sx={{height:'100vh',background:"#fafafa",padding:3}}>
+        <Grid item xs={3.5}>
+          <Box sx={{height:'100vh',background:"#fafafa",padding:2}}>
             <CenteredCard/>
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8.5}>
 
         <Box sx={{height:'100vh',background:"#f1f1f3"}}>
             <Buttons/>

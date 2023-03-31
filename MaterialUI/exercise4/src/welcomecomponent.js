@@ -5,6 +5,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Box } from "@mui/system";
 import { CircularProgress } from "@mui/material";
+
+import Button from '@mui/material/Button';
 const useStyles = makeStyles({
   card: {
     textAlign: "left",
@@ -44,6 +46,9 @@ export default function CenteredCard() {
           
         </Typography>
         <CircularProgressWithLabel value={5} />
+        <Box marginLeft={10} marginTop={10}>
+          <Button variant="contained" sx={{background:'white',color:'black'}}>SEE FULL REPORTS</Button>
+        </Box>
     </Box>
   );
 }
@@ -54,10 +59,10 @@ function CircularProgressWithLabel(props) {
         <Box>
            <Typography variant="h6" align="center"> Tasks to do</Typography>
         <Box sx={{ position: 'relative', display: 'inline-flex',marginTop:2 }}>
-            <CircularProgress variant="determinate" {...props} size={200} thickness={2} style={{ color: '#249ff3'}}/>
+            <CircularProgress variant="determinate" {...props} size={180} thickness={2} style={{ color: '#249ff3'}}/>
             <CircularProgress
             variant="determinate"
-            size={200} thickness={2}
+            size={180} thickness={2}
             value={100}
             style={{ color: 'rgba(0, 0, 0, 0.1)', position: 'absolute', top: 0, left: 0 }}
            />
@@ -85,7 +90,7 @@ function CircularProgressWithLabel(props) {
         <Box>
           <Box marginLeft={3} padding={1} justifyContent='space-between' alignItems='center'>
             <Typography variant="h6" marginBottom='20px'> Cases</Typography>
-            <Box height={200}  >
+            <Box height={180}  >
               <Box display='flex' justifyContent='space-around' alignItems='center'  marginTop={3} >
               <Typography variant="h6"> 12</Typography>
               <Typography marginLeft={1}>Open Document</Typography>
@@ -99,8 +104,10 @@ function CircularProgressWithLabel(props) {
               <Typography marginLeft={1} >New Employees</Typography>
               </Box>
             </Box>
-          </Box>   
+          </Box>  
+          
         </Box>
+
     </Box>
     );
   }
