@@ -3,34 +3,33 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import IconButton from '@material-ui/core/IconButton';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Typography } from '@mui/material';
 
 export default function Calender() {
   return (
-    <Autocomplete
-      id="country-select-demo"
-      sx={{ width: 300 }}
-      options={calender}
-      autoHighlight
-      getOptionLabel={(option) => option.label}
-      renderOption={(props, option) => (
-        <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-          
-          {option.label} ({option.code}) +{option.phone}
-        </Box>
-      )}
-      renderInput={(params) => (
-        <TextField
+    <TextField sx={{maxWidth:'250px', marginRight:'50px'}}
 
-          {...params}
-        
-          label="This Week"
-          inputProps={{
-            ...params.inputProps,
-            
-            startAdornment:<CalendarMonthOutlinedIcon/>
-          }}
-        />
-      )}
+      label=""
+      InputProps={{
+        startAdornment: (
+          <InputAdornment position="start">
+            <IconButton>
+              <CalendarMonthOutlinedIcon  sx={{color:'#ca8690'}}/>
+              <Typography>This Week</Typography>
+            </IconButton>
+          </InputAdornment>
+        ),
+        endAdornment: (
+          <InputAdornment position="end">
+            <IconButton>
+              <KeyboardArrowDownIcon />
+            </IconButton>
+          </InputAdornment>
+        ),
+      }}
     />
   );
 }

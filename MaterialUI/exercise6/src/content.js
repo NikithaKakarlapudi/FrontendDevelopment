@@ -60,24 +60,22 @@ export default function TabContent() {
         </Tabs>
     </Box>
     <Box>
-
-            <Calender/>
-
+      <Calender/>
     </Box>
 
     </Box>
      
       <TabPanel value={value} index={0}>
-         TEXT 1
+         
       </TabPanel>
       <TabPanel value={value} index={1}>
         <CourtTransation/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        TEXT 3
+        
       </TabPanel>
       <TabPanel value={value} index={2}>
-        TEXT 4
+        
       </TabPanel>
     </Box>
   );

@@ -23,21 +23,22 @@ function appBarLabel(label) {
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: '90%' }}
+                        sx={{ mr: '70%' ,ml:'200px'}}
                     >
                         <MenuIcon />
                     </IconButton>
               
                
-                
-                    <Badge color="error" variant="dot" >
+                    {/* <Box style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}> */}
+                    <Badge sx={{mr:3}} color="error" variant="dot"  >
                         <NotificationsOutlinedIcon/>
                     </Badge>
-                    <Avatar alt="Remy Sharp" src="https://www.compservice.sk/wp-content/uploads/2017/02/O6D1AA0-300x200.jpg"/>
-                    <Typography>adrian</Typography>
-                    <IconButton color="inherit" aria-label="bell">
+                    <Avatar sx={{mr:1}} alt="Remy Sharp" src="https://www.compservice.sk/wp-content/uploads/2017/02/O6D1AA0-300x200.jpg"/>
+                    <Typography sx={{mr:2}}>adrian</Typography>
+                    <IconButton  color="inherit" aria-label="bell">
                         <KeyboardArrowDownOutlinedIcon/>
                     </IconButton>
+                    {/* </Box> */}
                 
                
 
