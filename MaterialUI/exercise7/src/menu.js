@@ -58,7 +58,7 @@ export default function MenuTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' ,bgcolor:'#ffffff',px:10 }}>
+    <Box sx={{ width: '100%' ,bgcolor:'#f9fafc',px:10 }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider',display:'flex', justifyContent:'space-between',alignItems:'center' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             <Tab  icon={<DashboardOutlinedIcon />}  iconPosition="start" label="Dashboard" {...a11yProps(0)} />
@@ -75,6 +75,7 @@ export default function MenuTabs() {
 
 
       </Box>
+      <Box >
       <TabPanel value={value} index={0}>
             <Dashboard/>
       </TabPanel>
@@ -84,6 +85,8 @@ export default function MenuTabs() {
       <TabPanel value={value} index={2}>
         
       </TabPanel>
+      </Box>
+      
     </Box>
   );
 }

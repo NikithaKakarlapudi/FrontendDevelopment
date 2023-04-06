@@ -3,6 +3,7 @@ import './App.css';
 
 import TopDesign from './topdesign.js';
 import MenuTabs from './menu.js';
+import Properties from './properties.js';
 
 
 
@@ -13,6 +14,7 @@ function App() {
     
       <TopDesign/>
       <MenuTabs/>
+      {/* <Properties/> */}
     </div>
   );
 }
