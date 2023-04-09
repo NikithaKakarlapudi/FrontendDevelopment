@@ -18,7 +18,7 @@ export default function OutstandingBalance() {
             mt:'5px'
           }}
         >
-          <Typography variant="h5"> $ 6,280</Typography>
+          <Typography variant="h4" color="#071436"> $ 6,280</Typography>
           <MoreHorizIcon />
         </Box>
         <Box
@@ -30,7 +30,7 @@ export default function OutstandingBalance() {
           }}
         >
         <Box textAlign="left">
-            <Typography variant="h6"> Outstanding Balance</Typography>
+            <Typography variant="h6" fontWeight='500' color="#071436"> Outstanding Balances</Typography>
          <Box display="flex">
               <Typography variant="subtitle1" color="#596d93">All properties</Typography>
               <ExpandMoreIcon />
@@ -51,11 +51,11 @@ export default function OutstandingBalance() {
             variant="rounded"
             src="https://th.bing.com/th/id/OIP.L2tqDIWlJsxOVYeLzuV1XQHaJ4?pid=ImgDet&rs=1"
           ></Avatar>
-          <Box textAlign="left">
-            <Typography>Garden Row Multi Building</Typography>
-            <Typography>Complex</Typography>
-            <Typography>Amanda Rawles</Typography>
-            <Typography color="#26ad74">$350</Typography>
+          <Box textAlign="left" sx={{ml:2}}>
+            <Typography color='#071436' fontWeight='600'>Garden Row Multi Building</Typography>
+            <Typography color='#071436' fontWeight='600'>Complex</Typography>
+            <Typography color='#071436' fontWeight='600'>Amanda Rawles</Typography>
+            <Typography color="#26ad74" fontWeight='600'>$350</Typography>
           </Box>
         </Box>
 

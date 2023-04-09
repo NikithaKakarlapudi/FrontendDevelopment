@@ -41,10 +41,14 @@ export default function TopDesign() {
               justifyContent: "flex-start",
             }}
           >
-            <IconButton edge="start" color="inherit">
-              <PhoneOutlinedIcon />
+            <IconButton edge="start" color="">
+              <PhoneOutlinedIcon  sx={{ color:"rebeccapurple"}}/>
             </IconButton>
+            <Box>
             <Typography>829-362-7204</Typography>
+            <Typography color="#546176">Help&support</Typography>
+            </Box>
+            
           </Box>
           <Box
             sx={{
@@ -78,9 +82,9 @@ export default function TopDesign() {
               alt="Ram"
               src="https://i1.wp.com/www.torontophotographerz.com/wp-content/uploads/2017/06/Business-portrait-17-1.jpg?fit=800%2C1200&ssl=1"
             />
-            <Box sx={{alignItems:'left'}}>
+            <Box sx={{alignItems:'left' }}>
               <Typography>Rodney Leonard</Typography>
-              <Typography variant="subtitle2">Landlord</Typography>
+              <Typography variant="subtitle2" textAlign="left" color="#546176">Landlord</Typography>
             </Box>
             <ExpandMoreOutlinedIcon />
           </Box>
