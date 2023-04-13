@@ -3,6 +3,14 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Income from './income.js';
+import BalanceTransfers from './balancetransfer.js';
+import Tenants from './tenants.js';
+import Units from './units.js';
+import Properties from './properties.js';
+import LatePayments from './latepayments.js';
+import Vacancies from './vacancies.js';
+import Leases from './leases.js';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -10,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-  height:'300px'
+  height:'350px'
 }));
 
 export default function PropertiesDashboard() {
@@ -18,28 +26,44 @@ export default function PropertiesDashboard() {
     <Box sx={{ flexGrow: 1,my:2,mx:5 }}>
       <Grid container spacing={2}>
         <Grid item xs={6} md={8}>
-          <Item>Income</Item>
+          <Item>
+            <Income/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Balance Transfers</Item>
+          <Item>
+            <BalanceTransfers/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Late Payments</Item>
+          <Item>
+            <LatePayments/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Occupancy</Item>
+          <Item>
+            <Vacancies/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Leases</Item>
+          <Item>
+            <Leases/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Properties</Item>
+          <Item>
+            <Properties/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Units</Item>
+          <Item>
+            <Units/>
+          </Item>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Item>Tenants</Item>
+          <Item>
+            <Tenants/>
+          </Item>
         </Grid>
       </Grid>
     </Box>

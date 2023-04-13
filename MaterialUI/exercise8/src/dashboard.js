@@ -1,6 +1,5 @@
 import * as React from 'react';
-import jpstory_white from './Assets/storyjpmc_white.PNG'
-import jpstory_blue from './Assets/storyjpmc_blue.PNG'
+import jpstory_white from './Assets/storyjpmc_white.PNG';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
