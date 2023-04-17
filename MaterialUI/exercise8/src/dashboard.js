@@ -35,6 +35,7 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+import ViewInvoices from './viewinvoices';
 
 const drawerWidth = 240;
 
@@ -270,9 +271,10 @@ export default function Dashboard() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1 }}>
         <DrawerHeader />
-        <Header/>
-        <PropertiesDashboard/>
-        <Footer/>
+        <ViewInvoices/>
+        {/* <Header/> */}
+        {/* <PropertiesDashboard/> */}
+        {/* <Footer/> */}
       </Box>
     </Box>
   );

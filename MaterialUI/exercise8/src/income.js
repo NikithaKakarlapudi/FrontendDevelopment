@@ -7,7 +7,8 @@ import PieChartWithCenterText from './piechart';
 
 
 
-export default function Income(){
+export default function 
+Income(){
     return(
             <Box>
                 <Box textAlign="left">
