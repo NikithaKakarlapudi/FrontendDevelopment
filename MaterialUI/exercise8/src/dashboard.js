@@ -36,7 +36,8 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import ViewInvoices from './viewinvoices';
-import ViewProperties from './viewproperties.js';
+import ViewProperties from './viewproperties.js'; 
+import RentPay from './rentpay/rentpay.js';
 
 const drawerWidth = 240;
 
@@ -276,7 +277,9 @@ export default function Dashboard() {
         {/* <Header/> */}
         {/* <PropertiesDashboard/> */}
         {/* <Footer/> */}
-        <ViewProperties/>
+        {/* <ViewProperties/> */}
+        <RentPay/>
+          
       </Box>
     </Box>
   );
