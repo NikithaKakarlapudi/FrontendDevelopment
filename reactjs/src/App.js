@@ -7,6 +7,8 @@ import StateCom from './components/destructuring_props_state.js';
 import FunctionClick from './components/handling.js';
 import UserGreeting from './components/conditionalrendering.js';
 import NameList from './components/list_keys.js';
+import Form from './components/form.js';
+import  SignupForm  from './components/signupform.js';
 
 function App() {
   return (
@@ -24,7 +26,10 @@ function App() {
 
       {/* <UserGreeting/> */}
 
-      <NameList/>
+       {/* <NameList/>  */}
+      {/* <Form/>  */}
+
+       < SignupForm /> 
 
       {/* <h1>
         Function Components and Props
